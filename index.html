@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -289,22 +289,6 @@ a { text-decoration: none; color: inherit; }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ─── BRAND SEARCH ────────────────────────────────────────── */
-.inventory-search { display: flex; align-items: center; gap: 12px; background: var(--white); border: 2px solid var(--border); border-radius: 4px; padding: 0 16px; transition: border-color 0.2s, box-shadow 0.2s; }
-.inventory-search:focus-within { border-color: var(--red); box-shadow: 0 0 0 3px rgba(200,16,46,0.08); }
-.inventory-search svg { width: 18px; height: 18px; stroke: var(--muted); }
-.inventory-search input { flex: 1; border: none; outline: none; padding: 14px 0; font-family: 'Barlow', sans-serif; font-size: 0.95rem; color: var(--dark); }
-.inventory-search input::placeholder { color: var(--muted); opacity: 0.6; }
-.brand-category { margin-bottom: 48px; }
-.brand-category-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
-.brand-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-bottom: 32px; }
-.brand-item { background: var(--card); border: 1.5px solid var(--border); border-radius: 4px; padding: 20px; text-align: center; cursor: pointer; transition: all 0.25s ease; position: relative; }
-.brand-item:hover { border-color: var(--red); box-shadow: var(--shadow-md); transform: translateY(-4px); }
-.brand-item.hidden { display: none; }
-.brand-item-icon { font-size: 2.4rem; margin-bottom: 10px; display: block; }
-.brand-item-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark); line-height: 1.3; }
-.no-results { text-align: center; padding: 48px 24px; color: var(--muted); font-size: 0.95rem; }
-
 /* ─── RESPONSIVE ─────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .vehicles-grid { grid-template-columns: repeat(2, 1fr); }
@@ -423,6 +407,7 @@ a { text-decoration: none; color: inherit; }
     <div class="marquee-item"><span>Toyota Land Cruiser ZX</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Toyota Prado TXL</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Toyota Hilux Revo</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Jaguar E-PACE Chequered Flag</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Direct Imports from Japan</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Financing Available</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Premium SUVs & Pickups</span><span class="marquee-dot"></span></div>
@@ -430,6 +415,7 @@ a { text-decoration: none; color: inherit; }
     <div class="marquee-item"><span>Toyota Land Cruiser ZX</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Toyota Prado TXL</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Toyota Hilux Revo</span><span class="marquee-dot"></span></div>
+    <div class="marquee-item"><span>Jaguar E-PACE Chequered Flag</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Direct Imports from Japan</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Financing Available</span><span class="marquee-dot"></span></div>
     <div class="marquee-item"><span>Premium SUVs & Pickups</span><span class="marquee-dot"></span></div>
@@ -459,6 +445,7 @@ a { text-decoration: none; color: inherit; }
         <option value="Audi">Audi</option>
         <option value="Nissan">Nissan</option>
         <option value="Range Rover">Range Rover</option>
+        <option value="Jaguar">Jaguar</option>
       </select>
     </div>
 
@@ -612,6 +599,45 @@ a { text-decoration: none; color: inherit; }
         </div>
       </div>
 
+      <!-- VEHICLE 5: Jaguar E-PACE Chequered Flag Edition -->
+      <div class="vehicle-card reveal" style="transition-delay:0.4s" data-brand="Jaguar">
+        <div class="vehicle-img">
+          <img src="https://raw.githubusercontent.com/ResianEnterprisesLtd/resian-site-/main/IMG_7844.jpeg" alt="Jaguar E-PACE Chequered Flag Edition" loading="lazy" />
+          <div class="vehicle-img-overlay">
+            <span class="vehicle-condition-badge" style="background:#1a1a2e;border:1px solid rgba(255,255,255,0.25);">🚢 In Transit</span>
+            <button class="vehicle-wishlist" onclick="this.classList.toggle('liked'); event.preventDefault();">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="vehicle-body">
+          <div class="vehicle-make">Jaguar</div>
+          <div class="vehicle-name">E-PACE Chequered Flag Edition 🏁</div>
+          <div class="vehicle-features">
+            <span class="feature-tag">🌞 Panoramic Sunroof</span>
+            <span class="feature-tag">🏁 Chequered Flag Trim</span>
+            <span class="feature-tag">🔑 Keyless Entry</span>
+            <span class="feature-tag">📦 Powered Tailgate</span>
+            <span class="feature-tag">🔊 Meridian Sound</span>
+            <span class="feature-tag">⚡ 2.0L Turbo</span>
+            <span class="feature-tag" style="background:#e8f5e9;color:#2e7d32;">✓ Warranty</span>
+            <span class="feature-tag" style="background:#e8f5e9;color:#2e7d32;">✓ Free Plates</span>
+            <span class="feature-tag" style="background:#e8f5e9;color:#2e7d32;">✓ Free Service</span>
+          </div>
+          <div class="vehicle-price-row">
+            <div>
+              <div class="vehicle-price"><span class="vehicle-price-currency">$</span>450,000 <span style="font-size:0.85rem;font-weight:600;color:var(--muted);">TTD</span></div>
+            </div>
+          </div>
+          <div class="vehicle-actions">
+            <a href="tel:18682552277" class="btn btn-primary">📞 Call Now</a>
+            <a href="https://wa.me/18682552277?text=Hi%2C%20I'm%20interested%20in%20the%20Jaguar%20E-PACE%20Chequered%20Flag%20Edition%20listed%20at%20TTD%20450%2C000." target="_blank" class="btn btn-whatsapp">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -749,6 +775,7 @@ a { text-decoration: none; color: inherit; }
               <option>Toyota Hilux</option>
               <option>Toyota Fortuner</option>
               <option>Toyota RAV4</option>
+              <option>Jaguar E-PACE</option>
               <option>Other SUV / Pickup</option>
               <option>Other – I'll describe below</option>
             </select>
@@ -908,7 +935,7 @@ a { text-decoration: none; color: inherit; }
           <li><a href="#vehicles">Toyota Land Cruiser ZX</a></li>
           <li><a href="#vehicles">Toyota Prado TXL</a></li>
           <li><a href="#vehicles">Toyota Hilux Revo</a></li>
-          <li><a href="#vehicles">Toyota Fortuner</a></li>
+          <li><a href="#vehicles">Jaguar E-PACE Chequered Flag</a></li>
           <li><a href="#import">Request a Vehicle</a></li>
         </ul>
       </div>
