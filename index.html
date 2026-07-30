@@ -185,6 +185,7 @@ button { font-family: inherit; }
 .vehicle-condition-badge { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 7px 13px; border-radius: 20px; background: var(--gold); color: var(--black); }
 .vehicle-condition-badge.sold { background: var(--black); color: var(--gold-light); border: 1px solid var(--gold); }
 .vehicle-condition-badge.brand-new { background: var(--black); color: var(--gold-light); border: 1px solid rgba(216,189,122,0.5); }
+.vehicle-condition-group { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
 .vehicle-wishlist { width: 40px; height: 40px; background: rgba(255,255,255,0.95); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
 .vehicle-wishlist:hover { background: var(--gold); }
 .vehicle-wishlist svg { width: 20px; height: 20px; stroke: #333; fill: none; stroke-width: 2; }
@@ -353,7 +354,7 @@ button { font-family: inherit; }
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
     <a href="#" class="logo">
-      <span class="logo-main">Resian<span class="logo-dot">.</span></span>
+      <span class="logo-main">Resian</span>
       <span class="logo-sub">Enterprises Limited</span>
     </a>
     <ul class="nav-links">
@@ -471,7 +472,10 @@ button { font-family: inherit; }
         <div class="vehicle-img">
           <img src="https://raw.githubusercontent.com/ResianEnterprisesLtd/resian-site-/main/blackvezel" alt="Honda Vezel Z Brand New Zero Kilometres" loading="lazy" />
           <div class="vehicle-img-overlay">
-            <span class="vehicle-condition-badge brand-new">Brand New — 0 KM</span>
+            <div class="vehicle-condition-group">
+              <span class="vehicle-condition-badge brand-new">Brand New — 0 KM</span>
+              <span class="vehicle-condition-badge brand-new">In Transit</span>
+            </div>
             <button class="vehicle-wishlist" onclick="this.classList.toggle('liked'); event.preventDefault();">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </button>
@@ -486,6 +490,7 @@ button { font-family: inherit; }
             <span class="feature-tag">Hybrid Engine</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
           <div class="vehicle-price-row">
             <div>
@@ -506,7 +511,10 @@ button { font-family: inherit; }
         <div class="vehicle-img">
           <img src="https://raw.githubusercontent.com/ResianEnterprisesLtd/resian-site-/main/greenvezel" alt="Honda Vezel Z Brand New Zero Kilometres" loading="lazy" />
           <div class="vehicle-img-overlay">
-            <span class="vehicle-condition-badge brand-new">Brand New — 0 KM</span>
+            <div class="vehicle-condition-group">
+              <span class="vehicle-condition-badge brand-new">Brand New — 0 KM</span>
+              <span class="vehicle-condition-badge brand-new">In Transit</span>
+            </div>
             <button class="vehicle-wishlist" onclick="this.classList.toggle('liked'); event.preventDefault();">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </button>
@@ -521,6 +529,7 @@ button { font-family: inherit; }
             <span class="feature-tag">Hybrid Engine</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
           <div class="vehicle-price-row">
             <div>
@@ -557,6 +566,7 @@ button { font-family: inherit; }
             <span class="feature-tag">Low Kilometres</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
           <div class="vehicle-price-row">
             <div>
@@ -575,7 +585,7 @@ button { font-family: inherit; }
       <!-- VEHICLE 3: Toyota RAV4 TRD 2023 Gas -->
       <div class="vehicle-card reveal" style="transition-delay:0.1s" data-brand="Toyota">
         <div class="vehicle-img">
-          <img src="https://images.unsplash.com/photo-1633509817627-5a29634a5df0?w=700&q=80" alt="Toyota RAV4 TRD 2023 Gas" loading="lazy" />
+          <img src="https://raw.githubusercontent.com/ResianEnterprisesLtd/resian-site-/main/rav4trd" alt="Toyota RAV4 TRD 2023 Gas" loading="lazy" />
           <div class="vehicle-img-overlay">
             <span class="vehicle-condition-badge">New Arrival</span>
             <button class="vehicle-wishlist" onclick="this.classList.toggle('liked'); event.preventDefault();">
@@ -593,6 +603,7 @@ button { font-family: inherit; }
             <span class="feature-tag">Low Kilometres</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
           <div class="vehicle-price-row">
             <div>
@@ -629,6 +640,7 @@ button { font-family: inherit; }
             <span class="feature-tag">Low Kilometres</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
           <div class="vehicle-price-row">
             <div>
@@ -685,6 +697,7 @@ button { font-family: inherit; }
             <span class="feature-tag">Sport Interior</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
 
           <div class="vehicle-price-row">
@@ -724,6 +737,7 @@ button { font-family: inherit; }
             <span class="feature-tag">2.0L Turbo Engine</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
           <div class="vehicle-price-row">
             <div>
@@ -816,6 +830,7 @@ button { font-family: inherit; }
             <span class="feature-tag">Low Kilometres</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
           <div class="vehicle-price-row">
             <div>
@@ -852,6 +867,7 @@ button { font-family: inherit; }
             <span class="feature-tag">Low Kilometres</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
           <div class="vehicle-price-row">
             <div>
@@ -888,6 +904,7 @@ button { font-family: inherit; }
             <span class="feature-tag">Premium Audio System</span>
             <span class="feature-tag included">✓ Free Plates</span>
             <span class="feature-tag included">✓ Free Service</span>
+            <span class="feature-tag included">✓ Free Tint</span>
           </div>
           <div class="vehicle-price-row">
             <div>
@@ -1178,7 +1195,7 @@ button { font-family: inherit; }
     <div class="footer-top">
       <div class="footer-brand">
         <a href="#" class="logo" style="margin-bottom:8px;display:inline-flex;">
-          <span class="logo-main">Resian<span class="logo-dot">.</span></span>
+          <span class="logo-main">Resian</span>
         </a>
         <div class="footer-tagline">"Drive Quality. Drive Resian."</div>
         <p class="footer-brand-text">Registered Dealer, Trinidad and Tobago — Ministry of Trade #625<br>Roll On Roll Off Certified Dealer<br><br>Premium vehicle imports for Trinidad and Tobago. Sourcing quality SUVs, sedans, and pickups from Japan, Thailand, and beyond, delivered directly to your door.</p>
